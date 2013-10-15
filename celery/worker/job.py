@@ -392,8 +392,8 @@ class Request(object):
                 elif isinstance(exc, Terminated):
                     self._announce_revoked('terminated', True, str(exc), False)
             # (acks_late) acknowledge after result stored.
-            if self.task.acks_late:
-                self.acknowledge()
+            #if self.task.acks_late:
+            #    self.acknowledge()
         self._log_error(exc_info)
 
     def _log_error(self, einfo):
